@@ -29,7 +29,7 @@ function minidlna_status()
 	}
 
 	if status.running then
-		local fd = sys.httpget("http://192.168.66.1:%d/" % (port or 8200), true)
+		local fd = sys.httpget("http://127.0.0.1:%d/" % (port or 8200), true)
 		if fd then
 			local html = fd:read("*a")
 			if html then
